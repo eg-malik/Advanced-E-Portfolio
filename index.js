@@ -2,6 +2,18 @@
 // service_pcq3g64
 // T6xJ2kq4dGEgB4gEh
 
+let isModalOpen = false;
+let contrastToggle = false;
+
+function toggleContrast() {
+  contrastToggle = !contrastToggle;
+  if (contrastToggle) {
+    document.body.classList += " dark-theme";
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
+}
+
 function contact(event) {
   event.preventDefault();
   const loading = document.querySelector(".modal__overlay--loading");
@@ -24,8 +36,6 @@ function contact(event) {
       alert("The email service is temporarily unavailable.");
     });
 }
-
-let isModalOpen = false;
 
 function toggleModal() {
   if (isModalOpen) {
